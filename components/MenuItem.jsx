@@ -1,29 +1,13 @@
 import Link from "next/link"
 
-function MenuItem( {navigations} ) {
-//   const navigations = [{
-//     title:"Home",
-//     href:"/"
-//   },
-// {
-//   title:"About",
-//   href:"/about"
-// }]
-  // return (
-  //   <Link href={address}>
-  //   <Icon />
-    
-  //   <p>{title}</p>
-  //   </Link>
-  // )
+function MenuItem( {title, address, Icon } ) {
 
   return(
-    navigations.map((item)=>(
-      <Link key={item.title} href={item.href}>
-        {item.title}
+      <Link href={address} className='hover:text-amber-500'>
+        <Icon className='text-2xl sm:hidden' />
+        <p className='uppercase hidden sm:inline text-sm'>{title}</p>
       </Link>
-    ))
-  )
+    )
 }
 
 

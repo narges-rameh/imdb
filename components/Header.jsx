@@ -1,28 +1,29 @@
+import Link from 'next/link';
 import MenuItem from './MenuItem';
 
-// import {AiFilHome} from 'react-icons/ai';
-import {AiFillInfoCircle} from 'react-icons/ai';
-
 import { AiFillHome } from "react-icons/ai";
+import { AiFillInfoCircle } from "react-icons/ai";
 
 
 function Header() {
-  const navigations = [{
-    title:"Home",
-    href:"/"
-  },
-{
-  title:"About",
-  href:"/about"
-}]
+  
   return (
-    <>
-    <div className="">
-      <MenuItem navigations={navigations}/>
-        {/* <MenuItem title='home' address='/' Icon={AiFillHome} /> //TODO Check Later
-        <MenuItem title='about' address='/about' Icon={AiFillInfoCircle} /> */}
+    <div className='flex justify-between items-center
+     p-3 max-w-6xl mx-auto'>
+
+    <div className='flex gap-4'>
+        <MenuItem title='about' address='/about' Icon={AiFillHome} /> 
+        <MenuItem title='home' address='/' Icon={AiFillInfoCircle} /> 
     </div>
-    </>
+
+    <Link href={'/'} className='flex gap-1 items-center'>
+      <span className='text-2xl font-bold bg-amber-500
+       py-1 px-2 rounded-lg'>IMDb</span>
+
+      <span className='text-xl hidden sm:inline'>Clone</span>
+    </Link>
+
+    </div>
   )
 }
 
