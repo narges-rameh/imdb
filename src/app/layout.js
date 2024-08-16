@@ -7,8 +7,8 @@ import Providers from "./Providers";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "IMDB",
-  description: "An imdb clone with nextjs",
+  title: "IMDb clone",
+  description: "An IMDb clone with nextjs",
 };
 
 export default function RootLayout({ children }) {
