@@ -1,8 +1,10 @@
+
 import Link from 'next/link';
 import MenuItem from './MenuItem';
+import DarkModeSwitch from './DarkModeSwitch';
 
-import { AiFillHome } from "react-icons/ai";
-import { AiFillInfoCircle } from "react-icons/ai";
+
+import { AiFillHome, AiFillInfoCircle  } from "react-icons/ai";
 
 
 function Header() {
@@ -16,14 +18,20 @@ function Header() {
         <MenuItem title='home' address='/' Icon={AiFillInfoCircle} /> 
     </div>
 
-    <Link href={'/'} className='flex gap-1 items-center'>
-      <span className='text-2xl font-bold bg-amber-500
-       py-1 px-2 rounded-lg'>IMDb</span>
 
-      <span className='text-xl hidden sm:inline'>Clone</span>
-    </Link>
+    <div className='flex items-center gap-4'>
+      <DarkModeSwitch />
+       <Link href={'/'} className='flex gap-1 items-center'>
 
+        <span className='text-2xl font-bold bg-amber-500
+         py-1 px-2 rounded-lg'>IMDb</span>
+
+        <span className='text-xl hidden sm:inline'>Clone</span>
+
+       </Link>
     </div>
+
+</div>
   )
 }
 
