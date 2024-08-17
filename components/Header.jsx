@@ -14,8 +14,8 @@ function Header() {
      p-3 max-w-6xl mx-auto'>
 
     <div className='flex gap-4'>
-        <MenuItem title='about' address='/about' Icon={AiFillHome} /> 
-        <MenuItem title='home' address='/' Icon={AiFillInfoCircle} /> 
+        <MenuItem title='about' address='/' Icon={AiFillHome} /> 
+        <MenuItem title='home' address='/about' Icon={AiFillInfoCircle} /> 
     </div>
 
 
